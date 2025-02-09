@@ -43,6 +43,6 @@ namespace IzlucnoNatjecanje.Data
         public string Drzava { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Racun> Racun { get; set; }
+        public virtual ICollection<Racun> Racun { get; set; } = new List<Racun>();
     }
 }

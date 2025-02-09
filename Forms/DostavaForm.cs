@@ -72,6 +72,7 @@ namespace IzlucnoNatjecanje.assets
         private async void btnSpremi_Click(object sender, EventArgs e)
         {
             MetodaDostave selectedItem = comboMetode.SelectedItem as MetodaDostave;
+            selectedItem = await _dostavaRepository.GetByIdAsync(selectedItem.MetodaDostaveId);
             lblError.Text = "";
             lblError.Visible = false;
             lblSucceed.Visible = false;

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace IzlucnoNatjecanje
     public partial class ProizvodiForm : Form
     {
         private readonly MainForm _main;
+        private readonly AppDbContext _db;
         private readonly PotkatekorijaRepository _potkategorijaRepository;
         public List<Potkategorija> Potkategorije = new List<Potkategorija>();
 
@@ -23,6 +25,7 @@ namespace IzlucnoNatjecanje
             InitializeComponent();
             _main = main;
             _potkategorijaRepository = new PotkatekorijaRepository();
+            _db = new AppDbContext();
 
             StartPosition = FormStartPosition.Manual;
             Location = _main.Location;
@@ -89,11 +92,11 @@ namespace IzlucnoNatjecanje
             dataProizvodi.Width = width + 60;
         }
 
-        private void btnFiltriraj_Click(object sender, EventArgs e)
+        private async void btnFiltriraj_Click(object sender, EventArgs e)
         {
             string filter = txtFilter.Text;
 
-            int fullCount = dataProizvodi.RowCount;
+            int fullCount = await _db.Proizvodi.CountAsync();
 
             BindingSource bs = new BindingSource();
             bs.DataSource = dataProizvodi.DataSource;

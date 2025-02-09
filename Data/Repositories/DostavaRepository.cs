@@ -22,9 +22,15 @@ namespace IzlucnoNatjecanje.Data.Repositories
             return await _db.MetodeDostave.ToListAsync();
         }
 
+        public async Task<MetodaDostave> GetByIdAsync(int id)
+        {
+            return await _db.MetodeDostave.SingleOrDefaultAsync(m => m.MetodaDostaveId == id);
+        }
+
         public void Update(MetodaDostave current, MetodaDostave updated)
         {
             _db.Entry(current).CurrentValues.SetValues(updated);
+            _db.Entry(current).State = EntityState.Modified;
         }
 
         public async Task<bool> IsSavedAsync()

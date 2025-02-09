@@ -22,5 +22,10 @@ namespace IzlucnoNatjecanje.Data.Repositories
                 .Include(p => p.Potkategorija)
                 .ToListAsync();
         }
+
+        public async Task<int> GetCountAsync()
+        {
+            return await _db.Proizvodi.CountAsync();
+        }
     }
 }

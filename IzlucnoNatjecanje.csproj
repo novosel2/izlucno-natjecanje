@@ -65,6 +65,7 @@
     <Compile Include="Data\Entities\Racun.cs" />
     <Compile Include="Data\Entities\StavkaRacuna.cs" />
     <Compile Include="Data\Repositories\DostavaRepository.cs" />
+    <Compile Include="Data\Repositories\KupciRepository.cs" />
     <Compile Include="Data\Repositories\PotkategorijaRepository.cs" />
     <Compile Include="Data\Repositories\ProizvodiRepository.cs" />
     <Compile Include="Forms\DostavaForm.cs">
@@ -120,6 +121,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Medjuzupanijsko2024_v3DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Medjuzupanijsko2024_v3DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Medjuzupanijsko2024_v3DataSet6.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Forms\ProizvodiForm.cs">
@@ -220,7 +226,19 @@
     <None Include="Medjuzupanijsko2024_v3DataSet5.xss">
       <DependentUpon>Medjuzupanijsko2024_v3DataSet5.xsd</DependentUpon>
     </None>
+    <None Include="Medjuzupanijsko2024_v3DataSet6.xsc">
+      <DependentUpon>Medjuzupanijsko2024_v3DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Medjuzupanijsko2024_v3DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Medjuzupanijsko2024_v3DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Medjuzupanijsko2024_v3DataSet6.xss">
+      <DependentUpon>Medjuzupanijsko2024_v3DataSet6.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\IzlucnoNatjecanje.Data.Kupac.datasource" />
     <None Include="Properties\DataSources\IzlucnoNatjecanje.Data.Proizvod.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
