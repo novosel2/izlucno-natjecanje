@@ -20,17 +20,17 @@ namespace IzlucnoNatjecanje {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Medjuzupanijsko2024_v3DataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Medjuzupanijsko2024_v3DataSet8")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Medjuzupanijsko2024_v3DataSet : global::System.Data.DataSet {
+    public partial class Medjuzupanijsko2024_v3DataSet8 : global::System.Data.DataSet {
         
-        private ProizvodDataTable tableProizvod;
+        private KupacDataTable tableKupac;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public Medjuzupanijsko2024_v3DataSet() {
+        public Medjuzupanijsko2024_v3DataSet8() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace IzlucnoNatjecanje {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected Medjuzupanijsko2024_v3DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Medjuzupanijsko2024_v3DataSet8(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace IzlucnoNatjecanje {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Proizvod"] != null)) {
-                    base.Tables.Add(new ProizvodDataTable(ds.Tables["Proizvod"]));
+                if ((ds.Tables["Kupac"] != null)) {
+                    base.Tables.Add(new KupacDataTable(ds.Tables["Kupac"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace IzlucnoNatjecanje {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ProizvodDataTable Proizvod {
+        public KupacDataTable Kupac {
             get {
-                return this.tableProizvod;
+                return this.tableKupac;
             }
         }
         
@@ -127,7 +127,7 @@ namespace IzlucnoNatjecanje {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Medjuzupanijsko2024_v3DataSet cln = ((Medjuzupanijsko2024_v3DataSet)(base.Clone()));
+            Medjuzupanijsko2024_v3DataSet8 cln = ((Medjuzupanijsko2024_v3DataSet8)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace IzlucnoNatjecanje {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Proizvod"] != null)) {
-                    base.Tables.Add(new ProizvodDataTable(ds.Tables["Proizvod"]));
+                if ((ds.Tables["Kupac"] != null)) {
+                    base.Tables.Add(new KupacDataTable(ds.Tables["Kupac"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace IzlucnoNatjecanje {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableProizvod = ((ProizvodDataTable)(base.Tables["Proizvod"]));
+            this.tableKupac = ((KupacDataTable)(base.Tables["Kupac"]));
             if ((initTable == true)) {
-                if ((this.tableProizvod != null)) {
-                    this.tableProizvod.InitVars();
+                if ((this.tableKupac != null)) {
+                    this.tableKupac.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace IzlucnoNatjecanje {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Medjuzupanijsko2024_v3DataSet";
+            this.DataSetName = "Medjuzupanijsko2024_v3DataSet8";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Medjuzupanijsko2024_v3DataSet.xsd";
+            this.Namespace = "http://tempuri.org/Medjuzupanijsko2024_v3DataSet8.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableProizvod = new ProizvodDataTable();
-            base.Tables.Add(this.tableProizvod);
+            this.tableKupac = new KupacDataTable();
+            base.Tables.Add(this.tableKupac);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeProizvod() {
+        private bool ShouldSerializeKupac() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace IzlucnoNatjecanje {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Medjuzupanijsko2024_v3DataSet ds = new Medjuzupanijsko2024_v3DataSet();
+            Medjuzupanijsko2024_v3DataSet8 ds = new Medjuzupanijsko2024_v3DataSet8();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,33 +270,37 @@ namespace IzlucnoNatjecanje {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void ProizvodRowChangeEventHandler(object sender, ProizvodRowChangeEvent e);
+        public delegate void KupacRowChangeEventHandler(object sender, KupacRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ProizvodDataTable : global::System.Data.TypedTableBase<ProizvodRow> {
+        public partial class KupacDataTable : global::System.Data.TypedTableBase<KupacRow> {
             
-            private global::System.Data.DataColumn columnProizvodId;
+            private global::System.Data.DataColumn columnKupacId;
             
-            private global::System.Data.DataColumn columnNaziv;
+            private global::System.Data.DataColumn columnTitula;
             
-            private global::System.Data.DataColumn columnBroj;
+            private global::System.Data.DataColumn columnIme;
             
-            private global::System.Data.DataColumn columnBoja;
+            private global::System.Data.DataColumn columnPrezime;
             
-            private global::System.Data.DataColumn columnPotkategorijaId;
+            private global::System.Data.DataColumn columnUlica;
             
-            private global::System.Data.DataColumn columnSellStartDate;
+            private global::System.Data.DataColumn columnKucniBroj;
             
-            private global::System.Data.DataColumn columnSellEndDate;
+            private global::System.Data.DataColumn columnPostanskiBroj;
+            
+            private global::System.Data.DataColumn columnGrad;
+            
+            private global::System.Data.DataColumn columnDrzava;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProizvodDataTable() {
-                this.TableName = "Proizvod";
+            public KupacDataTable() {
+                this.TableName = "Kupac";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -304,7 +308,7 @@ namespace IzlucnoNatjecanje {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ProizvodDataTable(global::System.Data.DataTable table) {
+            internal KupacDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -321,64 +325,80 @@ namespace IzlucnoNatjecanje {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected ProizvodDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected KupacDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ProizvodIdColumn {
+            public global::System.Data.DataColumn KupacIdColumn {
                 get {
-                    return this.columnProizvodId;
+                    return this.columnKupacId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NazivColumn {
+            public global::System.Data.DataColumn TitulaColumn {
                 get {
-                    return this.columnNaziv;
+                    return this.columnTitula;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn BrojColumn {
+            public global::System.Data.DataColumn ImeColumn {
                 get {
-                    return this.columnBroj;
+                    return this.columnIme;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn BojaColumn {
+            public global::System.Data.DataColumn PrezimeColumn {
                 get {
-                    return this.columnBoja;
+                    return this.columnPrezime;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PotkategorijaIdColumn {
+            public global::System.Data.DataColumn UlicaColumn {
                 get {
-                    return this.columnPotkategorijaId;
+                    return this.columnUlica;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SellStartDateColumn {
+            public global::System.Data.DataColumn KucniBrojColumn {
                 get {
-                    return this.columnSellStartDate;
+                    return this.columnKucniBroj;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SellEndDateColumn {
+            public global::System.Data.DataColumn PostanskiBrojColumn {
                 get {
-                    return this.columnSellEndDate;
+                    return this.columnPostanskiBroj;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GradColumn {
+                get {
+                    return this.columnGrad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DrzavaColumn {
+                get {
+                    return this.columnDrzava;
                 }
             }
             
@@ -393,58 +413,60 @@ namespace IzlucnoNatjecanje {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProizvodRow this[int index] {
+            public KupacRow this[int index] {
                 get {
-                    return ((ProizvodRow)(this.Rows[index]));
+                    return ((KupacRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ProizvodRowChangeEventHandler ProizvodRowChanging;
+            public event KupacRowChangeEventHandler KupacRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ProizvodRowChangeEventHandler ProizvodRowChanged;
+            public event KupacRowChangeEventHandler KupacRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ProizvodRowChangeEventHandler ProizvodRowDeleting;
+            public event KupacRowChangeEventHandler KupacRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ProizvodRowChangeEventHandler ProizvodRowDeleted;
+            public event KupacRowChangeEventHandler KupacRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddProizvodRow(ProizvodRow row) {
+            public void AddKupacRow(KupacRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProizvodRow AddProizvodRow(string Naziv, string Broj, string Boja, int PotkategorijaId, System.DateTime SellStartDate, System.DateTime SellEndDate) {
-                ProizvodRow rowProizvodRow = ((ProizvodRow)(this.NewRow()));
+            public KupacRow AddKupacRow(string Titula, string Ime, string Prezime, string Ulica, int KucniBroj, string PostanskiBroj, string Grad, string Drzava) {
+                KupacRow rowKupacRow = ((KupacRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Naziv,
-                        Broj,
-                        Boja,
-                        PotkategorijaId,
-                        SellStartDate,
-                        SellEndDate};
-                rowProizvodRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowProizvodRow);
-                return rowProizvodRow;
+                        Titula,
+                        Ime,
+                        Prezime,
+                        Ulica,
+                        KucniBroj,
+                        PostanskiBroj,
+                        Grad,
+                        Drzava};
+                rowKupacRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowKupacRow);
+                return rowKupacRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProizvodRow FindByProizvodId(int ProizvodId) {
-                return ((ProizvodRow)(this.Rows.Find(new object[] {
-                            ProizvodId})));
+            public KupacRow FindByKupacId(int KupacId) {
+                return ((KupacRow)(this.Rows.Find(new object[] {
+                            KupacId})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ProizvodDataTable cln = ((ProizvodDataTable)(base.Clone()));
+                KupacDataTable cln = ((KupacDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -452,78 +474,87 @@ namespace IzlucnoNatjecanje {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ProizvodDataTable();
+                return new KupacDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnProizvodId = base.Columns["ProizvodId"];
-                this.columnNaziv = base.Columns["Naziv"];
-                this.columnBroj = base.Columns["Broj"];
-                this.columnBoja = base.Columns["Boja"];
-                this.columnPotkategorijaId = base.Columns["PotkategorijaId"];
-                this.columnSellStartDate = base.Columns["SellStartDate"];
-                this.columnSellEndDate = base.Columns["SellEndDate"];
+                this.columnKupacId = base.Columns["KupacId"];
+                this.columnTitula = base.Columns["Titula"];
+                this.columnIme = base.Columns["Ime"];
+                this.columnPrezime = base.Columns["Prezime"];
+                this.columnUlica = base.Columns["Ulica"];
+                this.columnKucniBroj = base.Columns["KucniBroj"];
+                this.columnPostanskiBroj = base.Columns["PostanskiBroj"];
+                this.columnGrad = base.Columns["Grad"];
+                this.columnDrzava = base.Columns["Drzava"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnProizvodId = new global::System.Data.DataColumn("ProizvodId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProizvodId);
-                this.columnNaziv = new global::System.Data.DataColumn("Naziv", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNaziv);
-                this.columnBroj = new global::System.Data.DataColumn("Broj", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBroj);
-                this.columnBoja = new global::System.Data.DataColumn("Boja", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBoja);
-                this.columnPotkategorijaId = new global::System.Data.DataColumn("PotkategorijaId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPotkategorijaId);
-                this.columnSellStartDate = new global::System.Data.DataColumn("SellStartDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSellStartDate);
-                this.columnSellEndDate = new global::System.Data.DataColumn("SellEndDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSellEndDate);
+                this.columnKupacId = new global::System.Data.DataColumn("KupacId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKupacId);
+                this.columnTitula = new global::System.Data.DataColumn("Titula", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTitula);
+                this.columnIme = new global::System.Data.DataColumn("Ime", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIme);
+                this.columnPrezime = new global::System.Data.DataColumn("Prezime", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrezime);
+                this.columnUlica = new global::System.Data.DataColumn("Ulica", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUlica);
+                this.columnKucniBroj = new global::System.Data.DataColumn("KucniBroj", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKucniBroj);
+                this.columnPostanskiBroj = new global::System.Data.DataColumn("PostanskiBroj", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPostanskiBroj);
+                this.columnGrad = new global::System.Data.DataColumn("Grad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGrad);
+                this.columnDrzava = new global::System.Data.DataColumn("Drzava", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDrzava);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnProizvodId}, true));
-                this.columnProizvodId.AutoIncrement = true;
-                this.columnProizvodId.AutoIncrementSeed = -1;
-                this.columnProizvodId.AutoIncrementStep = -1;
-                this.columnProizvodId.AllowDBNull = false;
-                this.columnProizvodId.ReadOnly = true;
-                this.columnProizvodId.Unique = true;
-                this.columnNaziv.AllowDBNull = false;
-                this.columnNaziv.MaxLength = 100;
-                this.columnBroj.AllowDBNull = false;
-                this.columnBroj.MaxLength = 25;
-                this.columnBoja.MaxLength = 15;
-                this.columnSellStartDate.AllowDBNull = false;
+                                this.columnKupacId}, true));
+                this.columnKupacId.AutoIncrement = true;
+                this.columnKupacId.AutoIncrementSeed = -1;
+                this.columnKupacId.AutoIncrementStep = -1;
+                this.columnKupacId.AllowDBNull = false;
+                this.columnKupacId.ReadOnly = true;
+                this.columnKupacId.Unique = true;
+                this.columnTitula.MaxLength = 8;
+                this.columnIme.AllowDBNull = false;
+                this.columnIme.MaxLength = 100;
+                this.columnPrezime.AllowDBNull = false;
+                this.columnPrezime.MaxLength = 100;
+                this.columnUlica.MaxLength = 40;
+                this.columnPostanskiBroj.MaxLength = 10;
+                this.columnGrad.MaxLength = 20;
+                this.columnDrzava.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProizvodRow NewProizvodRow() {
-                return ((ProizvodRow)(this.NewRow()));
+            public KupacRow NewKupacRow() {
+                return ((KupacRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ProizvodRow(builder);
+                return new KupacRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ProizvodRow);
+                return typeof(KupacRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ProizvodRowChanged != null)) {
-                    this.ProizvodRowChanged(this, new ProizvodRowChangeEvent(((ProizvodRow)(e.Row)), e.Action));
+                if ((this.KupacRowChanged != null)) {
+                    this.KupacRowChanged(this, new KupacRowChangeEvent(((KupacRow)(e.Row)), e.Action));
                 }
             }
             
@@ -531,8 +562,8 @@ namespace IzlucnoNatjecanje {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ProizvodRowChanging != null)) {
-                    this.ProizvodRowChanging(this, new ProizvodRowChangeEvent(((ProizvodRow)(e.Row)), e.Action));
+                if ((this.KupacRowChanging != null)) {
+                    this.KupacRowChanging(this, new KupacRowChangeEvent(((KupacRow)(e.Row)), e.Action));
                 }
             }
             
@@ -540,8 +571,8 @@ namespace IzlucnoNatjecanje {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ProizvodRowDeleted != null)) {
-                    this.ProizvodRowDeleted(this, new ProizvodRowChangeEvent(((ProizvodRow)(e.Row)), e.Action));
+                if ((this.KupacRowDeleted != null)) {
+                    this.KupacRowDeleted(this, new KupacRowChangeEvent(((KupacRow)(e.Row)), e.Action));
                 }
             }
             
@@ -549,14 +580,14 @@ namespace IzlucnoNatjecanje {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ProizvodRowDeleting != null)) {
-                    this.ProizvodRowDeleting(this, new ProizvodRowChangeEvent(((ProizvodRow)(e.Row)), e.Action));
+                if ((this.KupacRowDeleting != null)) {
+                    this.KupacRowDeleting(this, new KupacRowChangeEvent(((KupacRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveProizvodRow(ProizvodRow row) {
+            public void RemoveKupacRow(KupacRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -565,7 +596,7 @@ namespace IzlucnoNatjecanje {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Medjuzupanijsko2024_v3DataSet ds = new Medjuzupanijsko2024_v3DataSet();
+                Medjuzupanijsko2024_v3DataSet8 ds = new Medjuzupanijsko2024_v3DataSet8();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -583,7 +614,7 @@ namespace IzlucnoNatjecanje {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ProizvodDataTable";
+                attribute2.FixedValue = "KupacDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -627,143 +658,216 @@ namespace IzlucnoNatjecanje {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ProizvodRow : global::System.Data.DataRow {
+        public partial class KupacRow : global::System.Data.DataRow {
             
-            private ProizvodDataTable tableProizvod;
+            private KupacDataTable tableKupac;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ProizvodRow(global::System.Data.DataRowBuilder rb) : 
+            internal KupacRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableProizvod = ((ProizvodDataTable)(this.Table));
+                this.tableKupac = ((KupacDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int ProizvodId {
+            public int KupacId {
                 get {
-                    return ((int)(this[this.tableProizvod.ProizvodIdColumn]));
+                    return ((int)(this[this.tableKupac.KupacIdColumn]));
                 }
                 set {
-                    this[this.tableProizvod.ProizvodIdColumn] = value;
+                    this[this.tableKupac.KupacIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Naziv {
-                get {
-                    return ((string)(this[this.tableProizvod.NazivColumn]));
-                }
-                set {
-                    this[this.tableProizvod.NazivColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Broj {
-                get {
-                    return ((string)(this[this.tableProizvod.BrojColumn]));
-                }
-                set {
-                    this[this.tableProizvod.BrojColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Boja {
+            public string Titula {
                 get {
                     try {
-                        return ((string)(this[this.tableProizvod.BojaColumn]));
+                        return ((string)(this[this.tableKupac.TitulaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Boja\' in table \'Proizvod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Titula\' in table \'Kupac\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProizvod.BojaColumn] = value;
+                    this[this.tableKupac.TitulaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int PotkategorijaId {
+            public string Ime {
+                get {
+                    return ((string)(this[this.tableKupac.ImeColumn]));
+                }
+                set {
+                    this[this.tableKupac.ImeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Prezime {
+                get {
+                    return ((string)(this[this.tableKupac.PrezimeColumn]));
+                }
+                set {
+                    this[this.tableKupac.PrezimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Ulica {
                 get {
                     try {
-                        return ((int)(this[this.tableProizvod.PotkategorijaIdColumn]));
+                        return ((string)(this[this.tableKupac.UlicaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PotkategorijaId\' in table \'Proizvod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Ulica\' in table \'Kupac\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProizvod.PotkategorijaIdColumn] = value;
+                    this[this.tableKupac.UlicaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime SellStartDate {
-                get {
-                    return ((global::System.DateTime)(this[this.tableProizvod.SellStartDateColumn]));
-                }
-                set {
-                    this[this.tableProizvod.SellStartDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime SellEndDate {
+            public int KucniBroj {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableProizvod.SellEndDateColumn]));
+                        return ((int)(this[this.tableKupac.KucniBrojColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SellEndDate\' in table \'Proizvod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'KucniBroj\' in table \'Kupac\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProizvod.SellEndDateColumn] = value;
+                    this[this.tableKupac.KucniBrojColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsBojaNull() {
-                return this.IsNull(this.tableProizvod.BojaColumn);
+            public string PostanskiBroj {
+                get {
+                    try {
+                        return ((string)(this[this.tableKupac.PostanskiBrojColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PostanskiBroj\' in table \'Kupac\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKupac.PostanskiBrojColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetBojaNull() {
-                this[this.tableProizvod.BojaColumn] = global::System.Convert.DBNull;
+            public string Grad {
+                get {
+                    try {
+                        return ((string)(this[this.tableKupac.GradColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Grad\' in table \'Kupac\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKupac.GradColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsPotkategorijaIdNull() {
-                return this.IsNull(this.tableProizvod.PotkategorijaIdColumn);
+            public string Drzava {
+                get {
+                    try {
+                        return ((string)(this[this.tableKupac.DrzavaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Drzava\' in table \'Kupac\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKupac.DrzavaColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetPotkategorijaIdNull() {
-                this[this.tableProizvod.PotkategorijaIdColumn] = global::System.Convert.DBNull;
+            public bool IsTitulaNull() {
+                return this.IsNull(this.tableKupac.TitulaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSellEndDateNull() {
-                return this.IsNull(this.tableProizvod.SellEndDateColumn);
+            public void SetTitulaNull() {
+                this[this.tableKupac.TitulaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSellEndDateNull() {
-                this[this.tableProizvod.SellEndDateColumn] = global::System.Convert.DBNull;
+            public bool IsUlicaNull() {
+                return this.IsNull(this.tableKupac.UlicaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetUlicaNull() {
+                this[this.tableKupac.UlicaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsKucniBrojNull() {
+                return this.IsNull(this.tableKupac.KucniBrojColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetKucniBrojNull() {
+                this[this.tableKupac.KucniBrojColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPostanskiBrojNull() {
+                return this.IsNull(this.tableKupac.PostanskiBrojColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPostanskiBrojNull() {
+                this[this.tableKupac.PostanskiBrojColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGradNull() {
+                return this.IsNull(this.tableKupac.GradColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGradNull() {
+                this[this.tableKupac.GradColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDrzavaNull() {
+                return this.IsNull(this.tableKupac.DrzavaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDrzavaNull() {
+                this[this.tableKupac.DrzavaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -771,22 +875,22 @@ namespace IzlucnoNatjecanje {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class ProizvodRowChangeEvent : global::System.EventArgs {
+        public class KupacRowChangeEvent : global::System.EventArgs {
             
-            private ProizvodRow eventRow;
+            private KupacRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProizvodRowChangeEvent(ProizvodRow row, global::System.Data.DataRowAction action) {
+            public KupacRowChangeEvent(KupacRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProizvodRow Row {
+            public KupacRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -802,7 +906,7 @@ namespace IzlucnoNatjecanje {
         }
     }
 }
-namespace IzlucnoNatjecanje.Medjuzupanijsko2024_v3DataSetTableAdapters {
+namespace IzlucnoNatjecanje.Medjuzupanijsko2024_v3DataSet8TableAdapters {
     
     
     /// <summary>
@@ -814,7 +918,7 @@ namespace IzlucnoNatjecanje.Medjuzupanijsko2024_v3DataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ProizvodTableAdapter : global::System.ComponentModel.Component {
+    public partial class KupacTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -828,7 +932,7 @@ namespace IzlucnoNatjecanje.Medjuzupanijsko2024_v3DataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public ProizvodTableAdapter() {
+        public KupacTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -925,62 +1029,78 @@ namespace IzlucnoNatjecanje.Medjuzupanijsko2024_v3DataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Proizvod";
-            tableMapping.ColumnMappings.Add("ProizvodId", "ProizvodId");
-            tableMapping.ColumnMappings.Add("Naziv", "Naziv");
-            tableMapping.ColumnMappings.Add("Broj", "Broj");
-            tableMapping.ColumnMappings.Add("Boja", "Boja");
-            tableMapping.ColumnMappings.Add("PotkategorijaId", "PotkategorijaId");
-            tableMapping.ColumnMappings.Add("SellStartDate", "SellStartDate");
-            tableMapping.ColumnMappings.Add("SellEndDate", "SellEndDate");
+            tableMapping.DataSetTable = "Kupac";
+            tableMapping.ColumnMappings.Add("KupacId", "KupacId");
+            tableMapping.ColumnMappings.Add("Titula", "Titula");
+            tableMapping.ColumnMappings.Add("Ime", "Ime");
+            tableMapping.ColumnMappings.Add("Prezime", "Prezime");
+            tableMapping.ColumnMappings.Add("Ulica", "Ulica");
+            tableMapping.ColumnMappings.Add("KucniBroj", "KucniBroj");
+            tableMapping.ColumnMappings.Add("PostanskiBroj", "PostanskiBroj");
+            tableMapping.ColumnMappings.Add("Grad", "Grad");
+            tableMapping.ColumnMappings.Add("Drzava", "Drzava");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Proizvod] WHERE (([ProizvodId] = @Original_ProizvodId) AND ([Naziv] = @Original_Naziv) AND ([Broj] = @Original_Broj) AND ((@IsNull_Boja = 1 AND [Boja] IS NULL) OR ([Boja] = @Original_Boja)) AND ((@IsNull_PotkategorijaId = 1 AND [PotkategorijaId] IS NULL) OR ([PotkategorijaId] = @Original_PotkategorijaId)) AND ([SellStartDate] = @Original_SellStartDate) AND ((@IsNull_SellEndDate = 1 AND [SellEndDate] IS NULL) OR ([SellEndDate] = @Original_SellEndDate)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Kupac] WHERE (([KupacId] = @Original_KupacId) AND ((@IsNull_Titula = 1 AND [Titula] IS NULL) OR ([Titula] = @Original_Titula)) AND ([Ime] = @Original_Ime) AND ([Prezime] = @Original_Prezime) AND ((@IsNull_Ulica = 1 AND [Ulica] IS NULL) OR ([Ulica] = @Original_Ulica)) AND ((@IsNull_KucniBroj = 1 AND [KucniBroj] IS NULL) OR ([KucniBroj] = @Original_KucniBroj)) AND ((@IsNull_PostanskiBroj = 1 AND [PostanskiBroj] IS NULL) OR ([PostanskiBroj] = @Original_PostanskiBroj)) AND ((@IsNull_Grad = 1 AND [Grad] IS NULL) OR ([Grad] = @Original_Grad)) AND ((@IsNull_Drzava = 1 AND [Drzava] IS NULL) OR ([Drzava] = @Original_Drzava)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProizvodId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProizvodId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Broj", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Broj", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Boja", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Boja", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Boja", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Boja", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PotkategorijaId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PotkategorijaId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PotkategorijaId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PotkategorijaId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SellStartDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SellStartDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SellEndDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SellEndDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SellEndDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SellEndDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KupacId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KupacId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Titula", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titula", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Titula", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titula", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ime", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prezime", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prezime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ulica", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ulica", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ulica", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ulica", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_KucniBroj", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KucniBroj", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KucniBroj", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KucniBroj", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PostanskiBroj", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostanskiBroj", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PostanskiBroj", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostanskiBroj", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Grad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Grad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Grad", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Grad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Drzava", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Drzava", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Drzava", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Drzava", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Proizvod] ([Naziv], [Broj], [Boja], [PotkategorijaId], [SellStartDate], [SellEndDate]) VALUES (@Naziv, @Broj, @Boja, @PotkategorijaId, @SellStartDate, @SellEndDate);
-SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDate FROM Proizvod WHERE (ProizvodId = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Kupac] ([Titula], [Ime], [Prezime], [Ulica], [KucniBroj], [PostanskiBroj], [Grad], [Drzava]) VALUES (@Titula, @Ime, @Prezime, @Ulica, @KucniBroj, @PostanskiBroj, @Grad, @Drzava);
+SELECT KupacId, Titula, Ime, Prezime, Ulica, KucniBroj, PostanskiBroj, Grad, Drzava FROM Kupac WHERE (KupacId = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Broj", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Broj", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Boja", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Boja", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PotkategorijaId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PotkategorijaId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SellStartDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SellStartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SellEndDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SellEndDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Titula", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ime", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prezime", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prezime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ulica", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ulica", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KucniBroj", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KucniBroj", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PostanskiBroj", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostanskiBroj", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Grad", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Grad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Drzava", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Drzava", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Proizvod] SET [Naziv] = @Naziv, [Broj] = @Broj, [Boja] = @Boja, [PotkategorijaId] = @PotkategorijaId, [SellStartDate] = @SellStartDate, [SellEndDate] = @SellEndDate WHERE (([ProizvodId] = @Original_ProizvodId) AND ([Naziv] = @Original_Naziv) AND ([Broj] = @Original_Broj) AND ((@IsNull_Boja = 1 AND [Boja] IS NULL) OR ([Boja] = @Original_Boja)) AND ((@IsNull_PotkategorijaId = 1 AND [PotkategorijaId] IS NULL) OR ([PotkategorijaId] = @Original_PotkategorijaId)) AND ([SellStartDate] = @Original_SellStartDate) AND ((@IsNull_SellEndDate = 1 AND [SellEndDate] IS NULL) OR ([SellEndDate] = @Original_SellEndDate)));
-SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDate FROM Proizvod WHERE (ProizvodId = @ProizvodId)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Kupac] SET [Titula] = @Titula, [Ime] = @Ime, [Prezime] = @Prezime, [Ulica] = @Ulica, [KucniBroj] = @KucniBroj, [PostanskiBroj] = @PostanskiBroj, [Grad] = @Grad, [Drzava] = @Drzava WHERE (([KupacId] = @Original_KupacId) AND ((@IsNull_Titula = 1 AND [Titula] IS NULL) OR ([Titula] = @Original_Titula)) AND ([Ime] = @Original_Ime) AND ([Prezime] = @Original_Prezime) AND ((@IsNull_Ulica = 1 AND [Ulica] IS NULL) OR ([Ulica] = @Original_Ulica)) AND ((@IsNull_KucniBroj = 1 AND [KucniBroj] IS NULL) OR ([KucniBroj] = @Original_KucniBroj)) AND ((@IsNull_PostanskiBroj = 1 AND [PostanskiBroj] IS NULL) OR ([PostanskiBroj] = @Original_PostanskiBroj)) AND ((@IsNull_Grad = 1 AND [Grad] IS NULL) OR ([Grad] = @Original_Grad)) AND ((@IsNull_Drzava = 1 AND [Drzava] IS NULL) OR ([Drzava] = @Original_Drzava)));
+SELECT KupacId, Titula, Ime, Prezime, Ulica, KucniBroj, PostanskiBroj, Grad, Drzava FROM Kupac WHERE (KupacId = @KupacId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Broj", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Broj", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Boja", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Boja", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PotkategorijaId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PotkategorijaId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SellStartDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SellStartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SellEndDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SellEndDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProizvodId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProizvodId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Broj", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Broj", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Boja", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Boja", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Boja", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Boja", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PotkategorijaId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PotkategorijaId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PotkategorijaId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PotkategorijaId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SellStartDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SellStartDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SellEndDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SellEndDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SellEndDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SellEndDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProizvodId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ProizvodId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Titula", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ime", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prezime", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prezime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ulica", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ulica", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KucniBroj", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KucniBroj", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PostanskiBroj", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostanskiBroj", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Grad", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Grad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Drzava", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Drzava", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KupacId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KupacId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Titula", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titula", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Titula", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titula", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ime", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prezime", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prezime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ulica", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ulica", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ulica", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ulica", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_KucniBroj", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KucniBroj", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KucniBroj", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KucniBroj", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PostanskiBroj", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostanskiBroj", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PostanskiBroj", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostanskiBroj", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Grad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Grad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Grad", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Grad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Drzava", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Drzava", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Drzava", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Drzava", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KupacId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "KupacId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -996,8 +1116,8 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDate" +
-                " FROM dbo.Proizvod";
+            this._commandCollection[0].CommandText = "SELECT KupacId, Titula, Ime, Prezime, Ulica, KucniBroj, PostanskiBroj, Grad, Drza" +
+                "va FROM dbo.Kupac";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1005,7 +1125,7 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Medjuzupanijsko2024_v3DataSet.ProizvodDataTable dataTable) {
+        public virtual int Fill(Medjuzupanijsko2024_v3DataSet8.KupacDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1018,9 +1138,9 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Medjuzupanijsko2024_v3DataSet.ProizvodDataTable GetData() {
+        public virtual Medjuzupanijsko2024_v3DataSet8.KupacDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Medjuzupanijsko2024_v3DataSet.ProizvodDataTable dataTable = new Medjuzupanijsko2024_v3DataSet.ProizvodDataTable();
+            Medjuzupanijsko2024_v3DataSet8.KupacDataTable dataTable = new Medjuzupanijsko2024_v3DataSet8.KupacDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1028,15 +1148,15 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Medjuzupanijsko2024_v3DataSet.ProizvodDataTable dataTable) {
+        public virtual int Update(Medjuzupanijsko2024_v3DataSet8.KupacDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Medjuzupanijsko2024_v3DataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Proizvod");
+        public virtual int Update(Medjuzupanijsko2024_v3DataSet8 dataSet) {
+            return this.Adapter.Update(dataSet, "Kupac");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1058,44 +1178,67 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ProizvodId, string Original_Naziv, string Original_Broj, string Original_Boja, global::System.Nullable<int> Original_PotkategorijaId, System.DateTime Original_SellStartDate, global::System.Nullable<global::System.DateTime> Original_SellEndDate) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ProizvodId));
-            if ((Original_Naziv == null)) {
-                throw new global::System.ArgumentNullException("Original_Naziv");
+        public virtual int Delete(int Original_KupacId, string Original_Titula, string Original_Ime, string Original_Prezime, string Original_Ulica, global::System.Nullable<int> Original_KucniBroj, string Original_PostanskiBroj, string Original_Grad, string Original_Drzava) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_KupacId));
+            if ((Original_Titula == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Naziv));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Titula));
             }
-            if ((Original_Broj == null)) {
-                throw new global::System.ArgumentNullException("Original_Broj");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Broj));
-            }
-            if ((Original_Boja == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            if ((Original_Ime == null)) {
+                throw new global::System.ArgumentNullException("Original_Ime");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Boja));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Ime));
             }
-            if ((Original_PotkategorijaId.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_PotkategorijaId.Value));
+            if ((Original_Prezime == null)) {
+                throw new global::System.ArgumentNullException("Original_Prezime");
             }
             else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Prezime));
+            }
+            if ((Original_Ulica == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_SellStartDate));
-            if ((Original_SellEndDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((System.DateTime)(Original_SellEndDate.Value));
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Ulica));
+            }
+            if ((Original_KucniBroj.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_KucniBroj.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PostanskiBroj == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_PostanskiBroj));
+            }
+            if ((Original_Grad == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Grad));
+            }
+            if ((Original_Drzava == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_Drzava));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1117,37 +1260,54 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Naziv, string Broj, string Boja, global::System.Nullable<int> PotkategorijaId, System.DateTime SellStartDate, global::System.Nullable<global::System.DateTime> SellEndDate) {
-            if ((Naziv == null)) {
-                throw new global::System.ArgumentNullException("Naziv");
+        public virtual int Insert(string Titula, string Ime, string Prezime, string Ulica, global::System.Nullable<int> KucniBroj, string PostanskiBroj, string Grad, string Drzava) {
+            if ((Titula == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Naziv));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Titula));
             }
-            if ((Broj == null)) {
-                throw new global::System.ArgumentNullException("Broj");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Broj));
-            }
-            if ((Boja == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((Ime == null)) {
+                throw new global::System.ArgumentNullException("Ime");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Boja));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Ime));
             }
-            if ((PotkategorijaId.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(PotkategorijaId.Value));
+            if ((Prezime == null)) {
+                throw new global::System.ArgumentNullException("Prezime");
             }
             else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Prezime));
+            }
+            if ((Ulica == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(SellStartDate));
-            if ((SellEndDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(SellEndDate.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Ulica));
+            }
+            if ((KucniBroj.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(KucniBroj.Value));
             }
             else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((PostanskiBroj == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(PostanskiBroj));
+            }
+            if ((Grad == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Grad));
+            }
+            if ((Drzava == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Drzava));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1169,77 +1329,135 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Naziv, string Broj, string Boja, global::System.Nullable<int> PotkategorijaId, System.DateTime SellStartDate, global::System.Nullable<global::System.DateTime> SellEndDate, int Original_ProizvodId, string Original_Naziv, string Original_Broj, string Original_Boja, global::System.Nullable<int> Original_PotkategorijaId, System.DateTime Original_SellStartDate, global::System.Nullable<global::System.DateTime> Original_SellEndDate, int ProizvodId) {
-            if ((Naziv == null)) {
-                throw new global::System.ArgumentNullException("Naziv");
+        public virtual int Update(
+                    string Titula, 
+                    string Ime, 
+                    string Prezime, 
+                    string Ulica, 
+                    global::System.Nullable<int> KucniBroj, 
+                    string PostanskiBroj, 
+                    string Grad, 
+                    string Drzava, 
+                    int Original_KupacId, 
+                    string Original_Titula, 
+                    string Original_Ime, 
+                    string Original_Prezime, 
+                    string Original_Ulica, 
+                    global::System.Nullable<int> Original_KucniBroj, 
+                    string Original_PostanskiBroj, 
+                    string Original_Grad, 
+                    string Original_Drzava, 
+                    int KupacId) {
+            if ((Titula == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Naziv));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Titula));
             }
-            if ((Broj == null)) {
-                throw new global::System.ArgumentNullException("Broj");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Broj));
-            }
-            if ((Boja == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((Ime == null)) {
+                throw new global::System.ArgumentNullException("Ime");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Boja));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Ime));
             }
-            if ((PotkategorijaId.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(PotkategorijaId.Value));
+            if ((Prezime == null)) {
+                throw new global::System.ArgumentNullException("Prezime");
             }
             else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Prezime));
+            }
+            if ((Ulica == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(SellStartDate));
-            if ((SellEndDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(SellEndDate.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Ulica));
+            }
+            if ((KucniBroj.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(KucniBroj.Value));
             }
             else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((PostanskiBroj == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_ProizvodId));
-            if ((Original_Naziv == null)) {
-                throw new global::System.ArgumentNullException("Original_Naziv");
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(PostanskiBroj));
+            }
+            if ((Grad == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Naziv));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Grad));
             }
-            if ((Original_Broj == null)) {
-                throw new global::System.ArgumentNullException("Original_Broj");
+            if ((Drzava == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Broj));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Drzava));
             }
-            if ((Original_Boja == null)) {
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_KupacId));
+            if ((Original_Titula == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Boja));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Titula));
             }
-            if ((Original_PotkategorijaId.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_PotkategorijaId.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_SellStartDate));
-            if ((Original_SellEndDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_SellEndDate.Value));
+            if ((Original_Ime == null)) {
+                throw new global::System.ArgumentNullException("Original_Ime");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Ime));
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(ProizvodId));
+            if ((Original_Prezime == null)) {
+                throw new global::System.ArgumentNullException("Original_Prezime");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Prezime));
+            }
+            if ((Original_Ulica == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Ulica));
+            }
+            if ((Original_KucniBroj.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_KucniBroj.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PostanskiBroj == null)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_PostanskiBroj));
+            }
+            if ((Original_Grad == null)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Grad));
+            }
+            if ((Original_Drzava == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Drzava));
+            }
+            this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(KupacId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1260,8 +1478,25 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Naziv, string Broj, string Boja, global::System.Nullable<int> PotkategorijaId, System.DateTime SellStartDate, global::System.Nullable<global::System.DateTime> SellEndDate, int Original_ProizvodId, string Original_Naziv, string Original_Broj, string Original_Boja, global::System.Nullable<int> Original_PotkategorijaId, System.DateTime Original_SellStartDate, global::System.Nullable<global::System.DateTime> Original_SellEndDate) {
-            return this.Update(Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDate, Original_ProizvodId, Original_Naziv, Original_Broj, Original_Boja, Original_PotkategorijaId, Original_SellStartDate, Original_SellEndDate, Original_ProizvodId);
+        public virtual int Update(
+                    string Titula, 
+                    string Ime, 
+                    string Prezime, 
+                    string Ulica, 
+                    global::System.Nullable<int> KucniBroj, 
+                    string PostanskiBroj, 
+                    string Grad, 
+                    string Drzava, 
+                    int Original_KupacId, 
+                    string Original_Titula, 
+                    string Original_Ime, 
+                    string Original_Prezime, 
+                    string Original_Ulica, 
+                    global::System.Nullable<int> Original_KucniBroj, 
+                    string Original_PostanskiBroj, 
+                    string Original_Grad, 
+                    string Original_Drzava) {
+            return this.Update(Titula, Ime, Prezime, Ulica, KucniBroj, PostanskiBroj, Grad, Drzava, Original_KupacId, Original_Titula, Original_Ime, Original_Prezime, Original_Ulica, Original_KucniBroj, Original_PostanskiBroj, Original_Grad, Original_Drzava, Original_KupacId);
         }
     }
     
@@ -1277,7 +1512,7 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         
         private UpdateOrderOption _updateOrder;
         
-        private ProizvodTableAdapter _proizvodTableAdapter;
+        private KupacTableAdapter _kupacTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1299,12 +1534,12 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ProizvodTableAdapter ProizvodTableAdapter {
+        public KupacTableAdapter KupacTableAdapter {
             get {
-                return this._proizvodTableAdapter;
+                return this._kupacTableAdapter;
             }
             set {
-                this._proizvodTableAdapter = value;
+                this._kupacTableAdapter = value;
             }
         }
         
@@ -1327,9 +1562,9 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._proizvodTableAdapter != null) 
-                            && (this._proizvodTableAdapter.Connection != null))) {
-                    return this._proizvodTableAdapter.Connection;
+                if (((this._kupacTableAdapter != null) 
+                            && (this._kupacTableAdapter.Connection != null))) {
+                    return this._kupacTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1344,7 +1579,7 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._proizvodTableAdapter != null)) {
+                if ((this._kupacTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1356,14 +1591,14 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(Medjuzupanijsko2024_v3DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Medjuzupanijsko2024_v3DataSet8 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._proizvodTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Proizvod.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._kupacTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Kupac.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._proizvodTableAdapter.Update(updatedRows));
+                    result = (result + this._kupacTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1375,13 +1610,13 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(Medjuzupanijsko2024_v3DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Medjuzupanijsko2024_v3DataSet8 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._proizvodTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Proizvod.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._kupacTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Kupac.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._proizvodTableAdapter.Update(addedRows));
+                    result = (result + this._kupacTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1393,13 +1628,13 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(Medjuzupanijsko2024_v3DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Medjuzupanijsko2024_v3DataSet8 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._proizvodTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Proizvod.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._kupacTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Kupac.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._proizvodTableAdapter.Update(deletedRows));
+                    result = (result + this._kupacTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1435,15 +1670,15 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(Medjuzupanijsko2024_v3DataSet dataSet) {
+        public virtual int UpdateAll(Medjuzupanijsko2024_v3DataSet8 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._proizvodTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._proizvodTableAdapter.Connection) == false))) {
+            if (((this._kupacTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._kupacTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1479,13 +1714,13 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._proizvodTableAdapter != null)) {
-                    revertConnections.Add(this._proizvodTableAdapter, this._proizvodTableAdapter.Connection);
-                    this._proizvodTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._proizvodTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._proizvodTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._proizvodTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._proizvodTableAdapter.Adapter);
+                if ((this._kupacTableAdapter != null)) {
+                    revertConnections.Add(this._kupacTableAdapter, this._kupacTableAdapter.Connection);
+                    this._kupacTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._kupacTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._kupacTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._kupacTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._kupacTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1546,9 +1781,9 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._proizvodTableAdapter != null)) {
-                    this._proizvodTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._proizvodTableAdapter]));
-                    this._proizvodTableAdapter.Transaction = null;
+                if ((this._kupacTableAdapter != null)) {
+                    this._kupacTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._kupacTableAdapter]));
+                    this._kupacTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

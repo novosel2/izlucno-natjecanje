@@ -31,18 +31,25 @@
             this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridProizvodi = new System.Windows.Forms.DataGridView();
-            this.lblLoading = new System.Windows.Forms.Label();
-            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brojDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bojaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.potkategorijaIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proizvodBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.medjuzupanijsko2024_v3DataSet7 = new IzlucnoNatjecanje.Medjuzupanijsko2024_v3DataSet7();
             this.proizvodBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblLoading = new System.Windows.Forms.Label();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.lblFilter = new System.Windows.Forms.Label();
             this.btnFiltriraj = new System.Windows.Forms.Button();
             this.lblFiltered = new System.Windows.Forms.Label();
+            this.medjuzupanijsko2024v3DataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.proizvodTableAdapter = new IzlucnoNatjecanje.Medjuzupanijsko2024_v3DataSet7TableAdapters.ProizvodTableAdapter();
+            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brojDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bojaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.potkategorijaIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProizvodi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medjuzupanijsko2024_v3DataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medjuzupanijsko2024v3DataSet5BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -66,12 +73,26 @@
             this.brojDataGridViewTextBoxColumn,
             this.bojaDataGridViewTextBoxColumn,
             this.potkategorijaIdDataGridViewTextBoxColumn});
-            this.dataGridProizvodi.DataSource = this.proizvodBindingSource;
+            this.dataGridProizvodi.DataSource = this.proizvodBindingSource1;
             this.dataGridProizvodi.Location = new System.Drawing.Point(171, 172);
             this.dataGridProizvodi.Name = "dataGridProizvodi";
             this.dataGridProizvodi.Size = new System.Drawing.Size(444, 178);
             this.dataGridProizvodi.TabIndex = 1;
             this.dataGridProizvodi.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridProizvodi_DataBindingComplete);
+            // 
+            // proizvodBindingSource1
+            // 
+            this.proizvodBindingSource1.DataMember = "Proizvod";
+            this.proizvodBindingSource1.DataSource = this.medjuzupanijsko2024_v3DataSet7;
+            // 
+            // medjuzupanijsko2024_v3DataSet7
+            // 
+            this.medjuzupanijsko2024_v3DataSet7.DataSetName = "Medjuzupanijsko2024_v3DataSet7";
+            this.medjuzupanijsko2024_v3DataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // proizvodBindingSource
+            // 
+            this.proizvodBindingSource.DataSource = typeof(IzlucnoNatjecanje.Data.Proizvod);
             // 
             // lblLoading
             // 
@@ -81,34 +102,6 @@
             this.lblLoading.Size = new System.Drawing.Size(54, 13);
             this.lblLoading.TabIndex = 2;
             this.lblLoading.Text = "Loading...";
-            // 
-            // nazivDataGridViewTextBoxColumn
-            // 
-            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "Naziv";
-            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
-            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
-            // 
-            // brojDataGridViewTextBoxColumn
-            // 
-            this.brojDataGridViewTextBoxColumn.DataPropertyName = "Broj";
-            this.brojDataGridViewTextBoxColumn.HeaderText = "Broj";
-            this.brojDataGridViewTextBoxColumn.Name = "brojDataGridViewTextBoxColumn";
-            // 
-            // bojaDataGridViewTextBoxColumn
-            // 
-            this.bojaDataGridViewTextBoxColumn.DataPropertyName = "Boja";
-            this.bojaDataGridViewTextBoxColumn.HeaderText = "Boja";
-            this.bojaDataGridViewTextBoxColumn.Name = "bojaDataGridViewTextBoxColumn";
-            // 
-            // potkategorijaIdDataGridViewTextBoxColumn
-            // 
-            this.potkategorijaIdDataGridViewTextBoxColumn.DataPropertyName = "Potkategorija";
-            this.potkategorijaIdDataGridViewTextBoxColumn.HeaderText = "Potkategorija";
-            this.potkategorijaIdDataGridViewTextBoxColumn.Name = "potkategorijaIdDataGridViewTextBoxColumn";
-            // 
-            // proizvodBindingSource
-            // 
-            this.proizvodBindingSource.DataSource = typeof(IzlucnoNatjecanje.Data.Proizvod);
             // 
             // txtFilter
             // 
@@ -149,6 +142,38 @@
             this.lblFiltered.Text = "Prikazano je {1} od ukupno {2} proizvoda";
             this.lblFiltered.Visible = false;
             // 
+            // medjuzupanijsko2024v3DataSet5BindingSource
+            // 
+            this.medjuzupanijsko2024v3DataSet5BindingSource.Position = 0;
+            // 
+            // proizvodTableAdapter
+            // 
+            this.proizvodTableAdapter.ClearBeforeFill = true;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "Naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            // 
+            // brojDataGridViewTextBoxColumn
+            // 
+            this.brojDataGridViewTextBoxColumn.DataPropertyName = "Broj";
+            this.brojDataGridViewTextBoxColumn.HeaderText = "Broj";
+            this.brojDataGridViewTextBoxColumn.Name = "brojDataGridViewTextBoxColumn";
+            // 
+            // bojaDataGridViewTextBoxColumn
+            // 
+            this.bojaDataGridViewTextBoxColumn.DataPropertyName = "Boja";
+            this.bojaDataGridViewTextBoxColumn.HeaderText = "Boja";
+            this.bojaDataGridViewTextBoxColumn.Name = "bojaDataGridViewTextBoxColumn";
+            // 
+            // potkategorijaIdDataGridViewTextBoxColumn
+            // 
+            this.potkategorijaIdDataGridViewTextBoxColumn.DataPropertyName = "PotkategorijaId";
+            this.potkategorijaIdDataGridViewTextBoxColumn.HeaderText = "Potkategorija";
+            this.potkategorijaIdDataGridViewTextBoxColumn.Name = "potkategorijaIdDataGridViewTextBoxColumn";
+            // 
             // ProizvodiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,7 +192,10 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProizvodiForm_FormClosed);
             this.Load += new System.EventHandler(this.ProizvodiForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProizvodi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medjuzupanijsko2024_v3DataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medjuzupanijsko2024v3DataSet5BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,15 +205,19 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridProizvodi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brojDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bojaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn potkategorijaIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource proizvodBindingSource;
         private System.Windows.Forms.Label lblLoading;
         private System.Windows.Forms.TextBox txtFilter;
         private System.Windows.Forms.Label lblFilter;
         private System.Windows.Forms.Button btnFiltriraj;
         private System.Windows.Forms.Label lblFiltered;
+        private System.Windows.Forms.BindingSource medjuzupanijsko2024v3DataSet5BindingSource;
+        private Medjuzupanijsko2024_v3DataSet7 medjuzupanijsko2024_v3DataSet7;
+        private System.Windows.Forms.BindingSource proizvodBindingSource1;
+        private Medjuzupanijsko2024_v3DataSet7TableAdapters.ProizvodTableAdapter proizvodTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brojDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bojaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn potkategorijaIdDataGridViewTextBoxColumn;
     }
 }

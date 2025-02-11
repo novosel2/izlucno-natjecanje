@@ -20,21 +20,17 @@ namespace IzlucnoNatjecanje {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Medjuzupanijsko2024_v3DataSet3")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Medjuzupanijsko2024_v3DataSet7")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Medjuzupanijsko2024_v3DataSet3 : global::System.Data.DataSet {
-        
-        private PotkategorijaDataTable tablePotkategorija;
+    public partial class Medjuzupanijsko2024_v3DataSet7 : global::System.Data.DataSet {
         
         private ProizvodDataTable tableProizvod;
-        
-        private global::System.Data.DataRelation relationFK_Proizvod_Potkategorija;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public Medjuzupanijsko2024_v3DataSet3() {
+        public Medjuzupanijsko2024_v3DataSet7() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -45,7 +41,7 @@ namespace IzlucnoNatjecanje {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected Medjuzupanijsko2024_v3DataSet3(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Medjuzupanijsko2024_v3DataSet7(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -58,9 +54,6 @@ namespace IzlucnoNatjecanje {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Potkategorija"] != null)) {
-                    base.Tables.Add(new PotkategorijaDataTable(ds.Tables["Potkategorija"]));
-                }
                 if ((ds.Tables["Proizvod"] != null)) {
                     base.Tables.Add(new ProizvodDataTable(ds.Tables["Proizvod"]));
                 }
@@ -80,16 +73,6 @@ namespace IzlucnoNatjecanje {
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
             base.Tables.CollectionChanged += schemaChangedHandler;
             this.Relations.CollectionChanged += schemaChangedHandler;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PotkategorijaDataTable Potkategorija {
-            get {
-                return this.tablePotkategorija;
-            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -144,7 +127,7 @@ namespace IzlucnoNatjecanje {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Medjuzupanijsko2024_v3DataSet3 cln = ((Medjuzupanijsko2024_v3DataSet3)(base.Clone()));
+            Medjuzupanijsko2024_v3DataSet7 cln = ((Medjuzupanijsko2024_v3DataSet7)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -169,9 +152,6 @@ namespace IzlucnoNatjecanje {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Potkategorija"] != null)) {
-                    base.Tables.Add(new PotkategorijaDataTable(ds.Tables["Potkategorija"]));
-                }
                 if ((ds.Tables["Proizvod"] != null)) {
                     base.Tables.Add(new ProizvodDataTable(ds.Tables["Proizvod"]));
                 }
@@ -208,43 +188,24 @@ namespace IzlucnoNatjecanje {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablePotkategorija = ((PotkategorijaDataTable)(base.Tables["Potkategorija"]));
-            if ((initTable == true)) {
-                if ((this.tablePotkategorija != null)) {
-                    this.tablePotkategorija.InitVars();
-                }
-            }
             this.tableProizvod = ((ProizvodDataTable)(base.Tables["Proizvod"]));
             if ((initTable == true)) {
                 if ((this.tableProizvod != null)) {
                     this.tableProizvod.InitVars();
                 }
             }
-            this.relationFK_Proizvod_Potkategorija = this.Relations["FK_Proizvod_Potkategorija"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Medjuzupanijsko2024_v3DataSet3";
+            this.DataSetName = "Medjuzupanijsko2024_v3DataSet7";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Medjuzupanijsko2024_v3DataSet3.xsd";
+            this.Namespace = "http://tempuri.org/Medjuzupanijsko2024_v3DataSet7.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablePotkategorija = new PotkategorijaDataTable();
-            base.Tables.Add(this.tablePotkategorija);
             this.tableProizvod = new ProizvodDataTable();
             base.Tables.Add(this.tableProizvod);
-            this.relationFK_Proizvod_Potkategorija = new global::System.Data.DataRelation("FK_Proizvod_Potkategorija", new global::System.Data.DataColumn[] {
-                        this.tablePotkategorija.PotkategorijaIdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableProizvod.PotkategorijaIdColumn}, false);
-            this.Relations.Add(this.relationFK_Proizvod_Potkategorija);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializePotkategorija() {
-            return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -264,7 +225,7 @@ namespace IzlucnoNatjecanje {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Medjuzupanijsko2024_v3DataSet3 ds = new Medjuzupanijsko2024_v3DataSet3();
+            Medjuzupanijsko2024_v3DataSet7 ds = new Medjuzupanijsko2024_v3DataSet7();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -309,303 +270,7 @@ namespace IzlucnoNatjecanje {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void PotkategorijaRowChangeEventHandler(object sender, PotkategorijaRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void ProizvodRowChangeEventHandler(object sender, ProizvodRowChangeEvent e);
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PotkategorijaDataTable : global::System.Data.TypedTableBase<PotkategorijaRow> {
-            
-            private global::System.Data.DataColumn columnPotkategorijaId;
-            
-            private global::System.Data.DataColumn columnKategorijaId;
-            
-            private global::System.Data.DataColumn columnNaziv;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PotkategorijaDataTable() {
-                this.TableName = "Potkategorija";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal PotkategorijaDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected PotkategorijaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PotkategorijaIdColumn {
-                get {
-                    return this.columnPotkategorijaId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn KategorijaIdColumn {
-                get {
-                    return this.columnKategorijaId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NazivColumn {
-                get {
-                    return this.columnNaziv;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PotkategorijaRow this[int index] {
-                get {
-                    return ((PotkategorijaRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PotkategorijaRowChangeEventHandler PotkategorijaRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PotkategorijaRowChangeEventHandler PotkategorijaRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PotkategorijaRowChangeEventHandler PotkategorijaRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PotkategorijaRowChangeEventHandler PotkategorijaRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddPotkategorijaRow(PotkategorijaRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PotkategorijaRow AddPotkategorijaRow(int KategorijaId, string Naziv) {
-                PotkategorijaRow rowPotkategorijaRow = ((PotkategorijaRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        KategorijaId,
-                        Naziv};
-                rowPotkategorijaRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPotkategorijaRow);
-                return rowPotkategorijaRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PotkategorijaRow FindByPotkategorijaId(int PotkategorijaId) {
-                return ((PotkategorijaRow)(this.Rows.Find(new object[] {
-                            PotkategorijaId})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                PotkategorijaDataTable cln = ((PotkategorijaDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new PotkategorijaDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnPotkategorijaId = base.Columns["PotkategorijaId"];
-                this.columnKategorijaId = base.Columns["KategorijaId"];
-                this.columnNaziv = base.Columns["Naziv"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnPotkategorijaId = new global::System.Data.DataColumn("PotkategorijaId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPotkategorijaId);
-                this.columnKategorijaId = new global::System.Data.DataColumn("KategorijaId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKategorijaId);
-                this.columnNaziv = new global::System.Data.DataColumn("Naziv", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNaziv);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnPotkategorijaId}, true));
-                this.columnPotkategorijaId.AutoIncrement = true;
-                this.columnPotkategorijaId.AutoIncrementSeed = -1;
-                this.columnPotkategorijaId.AutoIncrementStep = -1;
-                this.columnPotkategorijaId.AllowDBNull = false;
-                this.columnPotkategorijaId.ReadOnly = true;
-                this.columnPotkategorijaId.Unique = true;
-                this.columnKategorijaId.AllowDBNull = false;
-                this.columnNaziv.AllowDBNull = false;
-                this.columnNaziv.MaxLength = 100;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PotkategorijaRow NewPotkategorijaRow() {
-                return ((PotkategorijaRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PotkategorijaRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(PotkategorijaRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.PotkategorijaRowChanged != null)) {
-                    this.PotkategorijaRowChanged(this, new PotkategorijaRowChangeEvent(((PotkategorijaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.PotkategorijaRowChanging != null)) {
-                    this.PotkategorijaRowChanging(this, new PotkategorijaRowChangeEvent(((PotkategorijaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.PotkategorijaRowDeleted != null)) {
-                    this.PotkategorijaRowDeleted(this, new PotkategorijaRowChangeEvent(((PotkategorijaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.PotkategorijaRowDeleting != null)) {
-                    this.PotkategorijaRowDeleting(this, new PotkategorijaRowChangeEvent(((PotkategorijaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemovePotkategorijaRow(PotkategorijaRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Medjuzupanijsko2024_v3DataSet3 ds = new Medjuzupanijsko2024_v3DataSet3();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PotkategorijaDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -754,19 +419,16 @@ namespace IzlucnoNatjecanje {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProizvodRow AddProizvodRow(string Naziv, string Broj, string Boja, PotkategorijaRow parentPotkategorijaRowByFK_Proizvod_Potkategorija, System.DateTime SellStartDate, System.DateTime SellEndDate) {
+            public ProizvodRow AddProizvodRow(string Naziv, string Broj, string Boja, int PotkategorijaId, System.DateTime SellStartDate, System.DateTime SellEndDate) {
                 ProizvodRow rowProizvodRow = ((ProizvodRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Naziv,
                         Broj,
                         Boja,
-                        null,
+                        PotkategorijaId,
                         SellStartDate,
                         SellEndDate};
-                if ((parentPotkategorijaRowByFK_Proizvod_Potkategorija != null)) {
-                    columnValuesArray[4] = parentPotkategorijaRowByFK_Proizvod_Potkategorija[0];
-                }
                 rowProizvodRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowProizvodRow);
                 return rowProizvodRow;
@@ -903,7 +565,7 @@ namespace IzlucnoNatjecanje {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Medjuzupanijsko2024_v3DataSet3 ds = new Medjuzupanijsko2024_v3DataSet3();
+                Medjuzupanijsko2024_v3DataSet7 ds = new Medjuzupanijsko2024_v3DataSet7();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -959,65 +621,6 @@ namespace IzlucnoNatjecanje {
                 }
                 xs.Add(dsSchema);
                 return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class PotkategorijaRow : global::System.Data.DataRow {
-            
-            private PotkategorijaDataTable tablePotkategorija;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal PotkategorijaRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablePotkategorija = ((PotkategorijaDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int PotkategorijaId {
-                get {
-                    return ((int)(this[this.tablePotkategorija.PotkategorijaIdColumn]));
-                }
-                set {
-                    this[this.tablePotkategorija.PotkategorijaIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int KategorijaId {
-                get {
-                    return ((int)(this[this.tablePotkategorija.KategorijaIdColumn]));
-                }
-                set {
-                    this[this.tablePotkategorija.KategorijaIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Naziv {
-                get {
-                    return ((string)(this[this.tablePotkategorija.NazivColumn]));
-                }
-                set {
-                    this[this.tablePotkategorija.NazivColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProizvodRow[] GetProizvodRows() {
-                if ((this.Table.ChildRelations["FK_Proizvod_Potkategorija"] == null)) {
-                    return new ProizvodRow[0];
-                }
-                else {
-                    return ((ProizvodRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Proizvod_Potkategorija"])));
-                }
             }
         }
         
@@ -1129,17 +732,6 @@ namespace IzlucnoNatjecanje {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PotkategorijaRow PotkategorijaRow {
-                get {
-                    return ((PotkategorijaRow)(this.GetParentRow(this.Table.ParentRelations["FK_Proizvod_Potkategorija"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Proizvod_Potkategorija"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsBojaNull() {
                 return this.IsNull(this.tableProizvod.BojaColumn);
             }
@@ -1179,40 +771,6 @@ namespace IzlucnoNatjecanje {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class PotkategorijaRowChangeEvent : global::System.EventArgs {
-            
-            private PotkategorijaRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PotkategorijaRowChangeEvent(PotkategorijaRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PotkategorijaRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public class ProizvodRowChangeEvent : global::System.EventArgs {
             
             private ProizvodRow eventRow;
@@ -1244,336 +802,8 @@ namespace IzlucnoNatjecanje {
         }
     }
 }
-namespace IzlucnoNatjecanje.Medjuzupanijsko2024_v3DataSet3TableAdapters {
+namespace IzlucnoNatjecanje.Medjuzupanijsko2024_v3DataSet7TableAdapters {
     
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PotkategorijaTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public PotkategorijaTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Potkategorija";
-            tableMapping.ColumnMappings.Add("PotkategorijaId", "PotkategorijaId");
-            tableMapping.ColumnMappings.Add("KategorijaId", "KategorijaId");
-            tableMapping.ColumnMappings.Add("Naziv", "Naziv");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Potkategorija] WHERE (([PotkategorijaId] = @Original_Potkatego" +
-                "rijaId) AND ([KategorijaId] = @Original_KategorijaId) AND ([Naziv] = @Original_N" +
-                "aziv))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PotkategorijaId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PotkategorijaId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KategorijaId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategorijaId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Potkategorija] ([KategorijaId], [Naziv]) VALUES (@KategorijaId" +
-                ", @Naziv);\r\nSELECT PotkategorijaId, KategorijaId, Naziv FROM Potkategorija WHERE" +
-                " (PotkategorijaId = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KategorijaId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategorijaId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Potkategorija] SET [KategorijaId] = @KategorijaId, [Naziv] = @Naziv WHERE (([PotkategorijaId] = @Original_PotkategorijaId) AND ([KategorijaId] = @Original_KategorijaId) AND ([Naziv] = @Original_Naziv));
-SELECT PotkategorijaId, KategorijaId, Naziv FROM Potkategorija WHERE (PotkategorijaId = @PotkategorijaId)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KategorijaId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategorijaId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PotkategorijaId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PotkategorijaId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KategorijaId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KategorijaId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PotkategorijaId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PotkategorijaId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::IzlucnoNatjecanje.Properties.Settings.Default.Medjuzupanijsko2024_v3ConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT PotkategorijaId, KategorijaId, Naziv FROM dbo.Potkategorija";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Medjuzupanijsko2024_v3DataSet3.PotkategorijaDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Medjuzupanijsko2024_v3DataSet3.PotkategorijaDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            Medjuzupanijsko2024_v3DataSet3.PotkategorijaDataTable dataTable = new Medjuzupanijsko2024_v3DataSet3.PotkategorijaDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Medjuzupanijsko2024_v3DataSet3.PotkategorijaDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Medjuzupanijsko2024_v3DataSet3 dataSet) {
-            return this.Adapter.Update(dataSet, "Potkategorija");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_PotkategorijaId, int Original_KategorijaId, string Original_Naziv) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_PotkategorijaId));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_KategorijaId));
-            if ((Original_Naziv == null)) {
-                throw new global::System.ArgumentNullException("Original_Naziv");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Naziv));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int KategorijaId, string Naziv) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(KategorijaId));
-            if ((Naziv == null)) {
-                throw new global::System.ArgumentNullException("Naziv");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Naziv));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int KategorijaId, string Naziv, int Original_PotkategorijaId, int Original_KategorijaId, string Original_Naziv, int PotkategorijaId) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(KategorijaId));
-            if ((Naziv == null)) {
-                throw new global::System.ArgumentNullException("Naziv");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Naziv));
-            }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_PotkategorijaId));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_KategorijaId));
-            if ((Original_Naziv == null)) {
-                throw new global::System.ArgumentNullException("Original_Naziv");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Naziv));
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(PotkategorijaId));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int KategorijaId, string Naziv, int Original_PotkategorijaId, int Original_KategorijaId, string Original_Naziv) {
-            return this.Update(KategorijaId, Naziv, Original_PotkategorijaId, Original_KategorijaId, Original_Naziv, Original_PotkategorijaId);
-        }
-    }
     
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
@@ -1775,7 +1005,7 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Medjuzupanijsko2024_v3DataSet3.ProizvodDataTable dataTable) {
+        public virtual int Fill(Medjuzupanijsko2024_v3DataSet7.ProizvodDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1788,9 +1018,9 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Medjuzupanijsko2024_v3DataSet3.ProizvodDataTable GetData() {
+        public virtual Medjuzupanijsko2024_v3DataSet7.ProizvodDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Medjuzupanijsko2024_v3DataSet3.ProizvodDataTable dataTable = new Medjuzupanijsko2024_v3DataSet3.ProizvodDataTable();
+            Medjuzupanijsko2024_v3DataSet7.ProizvodDataTable dataTable = new Medjuzupanijsko2024_v3DataSet7.ProizvodDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1798,14 +1028,14 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Medjuzupanijsko2024_v3DataSet3.ProizvodDataTable dataTable) {
+        public virtual int Update(Medjuzupanijsko2024_v3DataSet7.ProizvodDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Medjuzupanijsko2024_v3DataSet3 dataSet) {
+        public virtual int Update(Medjuzupanijsko2024_v3DataSet7 dataSet) {
             return this.Adapter.Update(dataSet, "Proizvod");
         }
         
@@ -2047,8 +1277,6 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         
         private UpdateOrderOption _updateOrder;
         
-        private PotkategorijaTableAdapter _potkategorijaTableAdapter;
-        
         private ProizvodTableAdapter _proizvodTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
@@ -2063,20 +1291,6 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public PotkategorijaTableAdapter PotkategorijaTableAdapter {
-            get {
-                return this._potkategorijaTableAdapter;
-            }
-            set {
-                this._potkategorijaTableAdapter = value;
             }
         }
         
@@ -2113,10 +1327,6 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._potkategorijaTableAdapter != null) 
-                            && (this._potkategorijaTableAdapter.Connection != null))) {
-                    return this._potkategorijaTableAdapter.Connection;
-                }
                 if (((this._proizvodTableAdapter != null) 
                             && (this._proizvodTableAdapter.Connection != null))) {
                     return this._proizvodTableAdapter.Connection;
@@ -2134,9 +1344,6 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._potkategorijaTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._proizvodTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -2149,17 +1356,8 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(Medjuzupanijsko2024_v3DataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Medjuzupanijsko2024_v3DataSet7 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._potkategorijaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Potkategorija.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._potkategorijaTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._proizvodTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Proizvod.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -2177,16 +1375,8 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(Medjuzupanijsko2024_v3DataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Medjuzupanijsko2024_v3DataSet7 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._potkategorijaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Potkategorija.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._potkategorijaTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._proizvodTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Proizvod.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -2203,21 +1393,13 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(Medjuzupanijsko2024_v3DataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Medjuzupanijsko2024_v3DataSet7 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._proizvodTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Proizvod.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._proizvodTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._potkategorijaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Potkategorija.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._potkategorijaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -2253,17 +1435,12 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(Medjuzupanijsko2024_v3DataSet3 dataSet) {
+        public virtual int UpdateAll(Medjuzupanijsko2024_v3DataSet7 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
-            }
-            if (((this._potkategorijaTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._potkategorijaTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
             }
             if (((this._proizvodTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._proizvodTableAdapter.Connection) == false))) {
@@ -2302,15 +1479,6 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._potkategorijaTableAdapter != null)) {
-                    revertConnections.Add(this._potkategorijaTableAdapter, this._potkategorijaTableAdapter.Connection);
-                    this._potkategorijaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._potkategorijaTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._potkategorijaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._potkategorijaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._potkategorijaTableAdapter.Adapter);
-                    }
-                }
                 if ((this._proizvodTableAdapter != null)) {
                     revertConnections.Add(this._proizvodTableAdapter, this._proizvodTableAdapter.Connection);
                     this._proizvodTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -2377,10 +1545,6 @@ SELECT ProizvodId, Naziv, Broj, Boja, PotkategorijaId, SellStartDate, SellEndDat
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._potkategorijaTableAdapter != null)) {
-                    this._potkategorijaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._potkategorijaTableAdapter]));
-                    this._potkategorijaTableAdapter.Transaction = null;
                 }
                 if ((this._proizvodTableAdapter != null)) {
                     this._proizvodTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._proizvodTableAdapter]));

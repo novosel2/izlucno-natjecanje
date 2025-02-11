@@ -15,7 +15,6 @@ namespace IzlucnoNatjecanje.Forms
     public partial class ProizvodiForm : Form
     {
         private readonly MainForm _mainForm;
-        private BindingSource _bindingSource = new BindingSource();
 
         public ProizvodiForm(MainForm mainForm)
         {
@@ -27,22 +26,15 @@ namespace IzlucnoNatjecanje.Forms
             this.Location = _mainForm.Location;
         }
 
-        private async void ProizvodiForm_Load(object sender, EventArgs e)
+        private void ProizvodiForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'medjuzupanijsko2024_v3DataSet7.Proizvod' table. You can move, or remove it, as needed.
+            this.proizvodTableAdapter.Fill(this.medjuzupanijsko2024_v3DataSet7.Proizvod);
             lblLoading.Show();
             lblFilter.Hide();
             txtFilter.Hide();
             btnFiltriraj.Hide();
             dataGridProizvodi.Hide();
-
-            using (var db = new AppDbContext())
-            {
-                List<Proizvod> proizvodi = await Task.Run(() => db.Proizvodi.ToListAsync());
-
-                _bindingSource.DataSource = proizvodi;
-
-                dataGridProizvodi.DataSource = _bindingSource;
-            }
 
             int width = 0;
             foreach (DataGridViewColumn column in dataGridProizvodi.Columns)
@@ -79,7 +71,7 @@ namespace IzlucnoNatjecanje.Forms
 
         private void DataGridProizvodi_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.Value == null)
+            if (e.Value == null || e.Value == DBNull.Value)
             {
                 e.Value = "Nije definirano";
             }
@@ -90,25 +82,29 @@ namespace IzlucnoNatjecanje.Forms
                 {
                     using (var db = new AppDbContext())
                     {
-                        e.Value = db.Potkategorije.SingleOrDefault(p => p.PotkategorijaId == id);
+                        e.Value = db.Potkategorije.SingleOrDefault(p => p.PotkategorijaId == id).Naziv;
                     }
                 }
             }
         }
 
-        private async void btnFiltriraj_Click(object sender, EventArgs e)
+        private void btnFiltriraj_Click(object sender, EventArgs e)
         {
             using (var db = new AppDbContext())
             {
                 var filter = txtFilter.Text;
-                var filteredProizvodi = await db.Proizvodi.ToListAsync();
 
-                _bindingSource.Filter = "Naziv like '%" + filter + "%'";
-                dataGridProizvodi.DataSource = _bindingSource;
+                BindingSource bs = (BindingSource)dataGridProizvodi.DataSource;
 
+                if (bs != null)
+                {
+                    bs.Filter = $"Naziv LIKE '%{filter}%'";
+                }
+
+                int filteredCount = bs.Count;
                 int count = db.Proizvodi.Count();
 
-                lblFiltered.Text = $"Prikazano je {filteredProizvodi.Count()} od ukupno {count} proizvoda";
+                lblFiltered.Text = $"Prikazano je {filteredCount} od ukupno {count} proizvoda";
                 lblFiltered.Visible = true;
             }
         }

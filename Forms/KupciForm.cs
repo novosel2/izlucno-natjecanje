@@ -1,10 +1,8 @@
 ﻿using IzlucnoNatjecanje.Data;
-using IzlucnoNatjecanje.Data.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,89 +13,115 @@ namespace IzlucnoNatjecanje.Forms
 {
     public partial class KupciForm : Form
     {
-        private readonly MainForm _main;
-        private BindingSource kupciBindingSource = new BindingSource();
-        private readonly AppDbContext db;
+        private readonly MainForm _mainForm;
 
-        public KupciForm(MainForm main)
+        public KupciForm(MainForm mainForm)
         {
             InitializeComponent();
-            _main = main;
 
-            StartPosition = FormStartPosition.Manual;
-            Location = _main.Location;
+            _mainForm = mainForm;
+        }
 
-            db = new AppDbContext();
-            dataGridKupci.DataSource = kupciBindingSource;
+        private void KupciForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'medjuzupanijsko2024_v3DataSet8.Kupac' table. You can move, or remove it, as needed.
+            this.kupacTableAdapter.Fill(this.medjuzupanijsko2024_v3DataSet8.Kupac);
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = _mainForm.Location;
+
+            if (dataGridKupci.Columns["Izdani računi"] == null)
+            {
+                DataGridViewTextBoxColumn izdaniRacuni = new DataGridViewTextBoxColumn();
+                izdaniRacuni.Name = "IzdaniRacuni";
+                izdaniRacuni.HeaderText = "Izdani računi";
+
+                dataGridKupci.Columns.Add(izdaniRacuni);
+            }
+
+            if (dataGridKupci.Columns["Brisanje"] == null)
+            {
+                DataGridViewButtonColumn deleteButton = new DataGridViewButtonColumn();
+                deleteButton.Name = "Brisanje";
+                deleteButton.HeaderText = "Brisanje";
+                deleteButton.Text = "Brisanje";
+                deleteButton.UseColumnTextForButtonValue = true;
+
+                dataGridKupci.Columns.Add(deleteButton);
+            }
+
+            dataGridKupci.CellFormatting += DataGridKupci_CellFormatting;
+
+            int width = 60;
+            foreach (DataGridViewColumn column in dataGridKupci.Columns)
+            {
+                width += column.Width;
+            }
+            dataGridKupci.Width = width;
+        }
+
+        private void DataGridKupci_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                if (e.Value == null || e.Value == DBNull.Value)
+                {
+                    e.Value = "Nije definirano";
+                }
+            }
+
+            using (var db = new AppDbContext())
+            {
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && e.ColumnIndex == 3)
+                {
+                    try
+                    {
+                        BindingSource bs = (BindingSource)dataGridKupci.DataSource;
+                        DataRowView rowView = (DataRowView)bs[e.RowIndex];
+                        int id = Convert.ToInt32(rowView["KupacId"]);
+
+                        int count = db.Racuni.Where(r => r.KupacId == id).Count();
+                        string racuni = "";
+
+                        for (int i = 0; i < count; i++)
+                            racuni += "*";
+
+                        e.Value = racuni;
+                    }
+                    catch 
+                    {
+                        return;
+                    }
+                }
+            }
+        }
+
+        private void dataGridKupci_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            using (var db = new AppDbContext())
+            {
+                if (e.RowIndex >= 0 && dataGridKupci.Columns[e.ColumnIndex].Name == "Brisanje")
+                {
+                    BindingSource bs = (BindingSource)dataGridKupci.DataSource;
+                    DataRowView rowView = (DataRowView)bs.Current;
+                    int id = Convert.ToInt32(rowView["KupacId"]);
+
+                    bs.RemoveAt(e.RowIndex);
+
+                    db.Kupci.Remove(db.Kupci.SingleOrDefault(k => k.KupacId == id));
+                    db.SaveChanges();
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void KupciForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            _main.Location = Location;
-            _main.Show();
-        }
-
-        private void btnPovratak_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private async void KupciForm_LoadAsync(object sender, EventArgs e)
-        {
-            lblLoading.Visible = true;
-            dataGridKupci.Visible = false;
-            btnNovi.Visible = false;
-
-            var kupci = await Task.Run(() => db.Kupci
-                .Include(k => k.Racun)
-                .ToListAsync());
-
-            kupciBindingSource.DataSource = kupci.Select(k => new
-            {
-                k.KupacId,
-                k.Ime,
-                k.Prezime,
-                k.Titula,
-                Racun = new string('*', k.Racun.Count),
-                Tag = k
-            });
-                
-            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
-            deleteButtonColumn.HeaderText = "Brisanje";
-            deleteButtonColumn.Text = "OBRIŠI";
-            deleteButtonColumn.Name = "btnDelete";
-            deleteButtonColumn.UseColumnTextForButtonValue = true;
-            deleteButtonColumn.Width = 100;
-
-            dataGridKupci.Columns.Add(deleteButtonColumn);
-
-
-            lblLoading.Visible = false;
-            dataGridKupci.Visible = true;
-            btnNovi.Visible = true;
-        }
-
-        private async void dataGridKupci_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == dataGridKupci.Columns["btnDelete"].Index)
-            {
-                var selectedKupac = (Kupac)dataGridKupci.Rows[e.RowIndex].DataBoundItem;
-
-                if (selectedKupac == null)
-                {
-                    return;
-                }
-
-                var kupacId = selectedKupac.KupacId;
-
-                if (kupacId != null)
-                {
-                    var kupac = await db.Kupci
-                        .SingleOrDefaultAsync(k => k.KupacId == kupacId);
-                }
-
-
-            }
+            _mainForm.Location = this.Location;
+            _mainForm.Show();
         }
     }
 }
