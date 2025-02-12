@@ -31,15 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridKupci = new System.Windows.Forms.DataGridView();
-            this.medjuzupanijsko2024_v3DataSet8 = new IzlucnoNatjecanje.Medjuzupanijsko2024_v3DataSet8();
-            this.kupacBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kupacTableAdapter = new IzlucnoNatjecanje.Medjuzupanijsko2024_v3DataSet8TableAdapters.KupacTableAdapter();
             this.titulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kupacBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.medjuzupanijsko2024_v3DataSet8 = new IzlucnoNatjecanje.Medjuzupanijsko2024_v3DataSet8();
+            this.kupacTableAdapter = new IzlucnoNatjecanje.Medjuzupanijsko2024_v3DataSet8TableAdapters.KupacTableAdapter();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridKupci)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medjuzupanijsko2024_v3DataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kupacBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medjuzupanijsko2024_v3DataSet8)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -72,37 +73,51 @@
             this.dataGridKupci.TabIndex = 2;
             this.dataGridKupci.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridKupci_CellContentClick);
             // 
-            // medjuzupanijsko2024_v3DataSet8
-            // 
-            this.medjuzupanijsko2024_v3DataSet8.DataSetName = "Medjuzupanijsko2024_v3DataSet8";
-            this.medjuzupanijsko2024_v3DataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kupacBindingSource
-            // 
-            this.kupacBindingSource.DataMember = "Kupac";
-            this.kupacBindingSource.DataSource = this.medjuzupanijsko2024_v3DataSet8;
-            // 
-            // kupacTableAdapter
-            // 
-            this.kupacTableAdapter.ClearBeforeFill = true;
-            // 
             // titulaDataGridViewTextBoxColumn
             // 
             this.titulaDataGridViewTextBoxColumn.DataPropertyName = "Titula";
             this.titulaDataGridViewTextBoxColumn.HeaderText = "Titula";
             this.titulaDataGridViewTextBoxColumn.Name = "titulaDataGridViewTextBoxColumn";
+            this.titulaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // imeDataGridViewTextBoxColumn
             // 
             this.imeDataGridViewTextBoxColumn.DataPropertyName = "Ime";
             this.imeDataGridViewTextBoxColumn.HeaderText = "Ime";
             this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            this.imeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // prezimeDataGridViewTextBoxColumn
             // 
             this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "Prezime";
             this.prezimeDataGridViewTextBoxColumn.HeaderText = "Prezime";
             this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            this.prezimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kupacBindingSource
+            // 
+            this.kupacBindingSource.DataMember = "Kupac";
+            this.kupacBindingSource.DataSource = this.medjuzupanijsko2024_v3DataSet8;
+            // 
+            // medjuzupanijsko2024_v3DataSet8
+            // 
+            this.medjuzupanijsko2024_v3DataSet8.DataSetName = "Medjuzupanijsko2024_v3DataSet8";
+            this.medjuzupanijsko2024_v3DataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kupacTableAdapter
+            // 
+            this.kupacTableAdapter.ClearBeforeFill = true;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(111, 93);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(72, 13);
+            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "NOVI KUPAC";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // KupciForm
             // 
@@ -110,6 +125,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.dataGridKupci);
             this.Controls.Add(this.button1);
             this.Name = "KupciForm";
@@ -117,9 +133,10 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KupciForm_FormClosed);
             this.Load += new System.EventHandler(this.KupciForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridKupci)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medjuzupanijsko2024_v3DataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kupacBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medjuzupanijsko2024_v3DataSet8)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -133,5 +150,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn titulaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
